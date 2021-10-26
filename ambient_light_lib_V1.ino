@@ -34,16 +34,15 @@ void loop()
   {
     brightness = constrain(outval, 0, 255); 
     analogWrite(LED,brightness);
-  
   }
   
-  if(displayValuesTimer.expired()){
-  ambient= analogRead(A5);
-  Serial.print("ambient = ");
-  Serial.print(ambient);
-  Serial.print("|brightness = ");
-  Serial.println(brightness);
+  if (displayValuesTimer.expired())
+  {
+    ambient= analogRead(A5);
+    Serial.print("ambient = ");
+    Serial.print(ambient);
+    Serial.print("|brightness = ");
+    Serial.println(brightness);
   }
-
 
 }
